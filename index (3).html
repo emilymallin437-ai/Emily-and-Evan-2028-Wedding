@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emily &amp; Evan’s Wedding</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<style>
+:root{--bg:#aab99d;--surface:#fffdf6;--text:#2b3626;--muted:#55634d;--accent:#4f6745;--line:#cfd9c4;--btntext:#fffdf6;--panel:rgba(255,253,246,.93);--wash:radial-gradient(ellipse at 15% 12%,rgba(255,255,255,.28),transparent 45%),radial-gradient(ellipse at 85% 30%,rgba(110,135,85,.38),transparent 50%),radial-gradient(ellipse at 35% 60%,rgba(205,215,150,.3),transparent 45%),radial-gradient(ellipse at 90% 85%,rgba(80,105,70,.32),transparent 45%),radial-gradient(ellipse at 10% 90%,rgba(235,240,215,.3),transparent 40%);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e261b;--surface:#2a3427;--text:#eef2e8;--muted:#b0bca8;--accent:#b8cfa9;--line:#3d4a38;--btntext:#1e261b;--panel:rgba(36,46,33,.94);--wash:none;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1e261b;--surface:#2a3427;--text:#eef2e8;--muted:#b0bca8;--accent:#b8cfa9;--line:#3d4a38;--btntext:#1e261b;--panel:rgba(36,46,33,.94);--wash:none;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--bg);background-image:var(--wash);color:var(--text);font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.6;font-size:20px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0}
+.hero{text-align:center;padding:14vh 24px 10vh;position:relative;overflow:hidden}
+.hero>div,.hero>h1{position:relative;z-index:1}
+.spray{position:absolute;width:min(52vw,320px);height:auto;opacity:.5;color:var(--accent);pointer-events:none}
+.s1{top:0;left:0}
+.s2{bottom:0;right:0;transform:rotate(180deg)}
+.lily{position:absolute;pointer-events:none;filter:drop-shadow(0 2px 4px rgba(40,55,35,.25))}
+.l1{width:min(60vw,270px);top:-50px;left:-60px;transform:rotate(-18deg)}
+.l2{width:min(52vw,230px);bottom:-40px;right:-50px;transform:rotate(28deg)}
+.l3{width:min(30vw,130px);top:16%;right:5%;transform:rotate(62deg)}
+.eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:12px;color:var(--text);font-weight:500}
+h1{font-family:'Pinyon Script','Snell Roundhand',cursive;font-weight:400;font-size:clamp(60px,16vw,112px);line-height:1.05;margin:18px 0 8px}
+h1 span{display:block;font-size:.45em;color:var(--accent);margin:0}
+.date{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(22px,5vw,30px)}
+.place{color:var(--text);margin-top:4px}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;padding:0 16px 40px;font-size:13px;letter-spacing:.15em;text-transform:uppercase}
+nav a{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+nav a:hover{border-color:var(--accent)}
+.eyebrow,nav,.btn,footer,.timeline b{font-family:'Jost',system-ui,sans-serif}
+section{max-width:680px;width:calc(100% - 32px);margin:24px auto;padding:48px 24px;background:var(--panel);border:1px solid rgba(255,255,255,.55);border-radius:20px;box-shadow:0 6px 24px rgba(40,55,35,.14);text-align:center}
+h2{font-family:'Pinyon Script','Snell Roundhand',cursive;font-weight:400;font-size:clamp(42px,10vw,58px);color:var(--accent);margin-bottom:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin:14px 0}
+.ph{background:color-mix(in srgb,var(--accent) 16%,transparent);padding:0 6px;border-radius:4px}
+.timeline{list-style:none;padding:0;margin:0;text-align:left}
+.timeline li{display:flex;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.timeline b{min-width:84px;font-weight:500;color:var(--accent)}
+details{text-align:left;border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:400}
+details p{margin:10px 0 0;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--btntext);text-decoration:none;padding:13px 30px;border-radius:999px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border:0;cursor:pointer;font-family:inherit}
+footer{text-align:center;padding:40px 24px 60px;color:var(--text);font-size:15px}
+footer button{background:none;border:0;color:var(--text);text-decoration:underline;cursor:pointer;font:inherit}
+#qrbox{display:none;margin:22px auto 0}
+#qr{display:inline-block;background:#fff;padding:14px;border-radius:10px}
+#qr img{display:block}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g id="fl"><g fill="none" stroke="currentColor" stroke-width="1.1"><ellipse cx="0" cy="-9" rx="4.5" ry="9"/><ellipse cx="0" cy="-9" rx="4.5" ry="9" transform="rotate(60)"/><ellipse cx="0" cy="-9" rx="4.5" ry="9" transform="rotate(120)"/><ellipse cx="0" cy="-9" rx="4.5" ry="9" transform="rotate(180)"/><ellipse cx="0" cy="-9" rx="4.5" ry="9" transform="rotate(240)"/><ellipse cx="0" cy="-9" rx="4.5" ry="9" transform="rotate(300)"/><circle r="2.5"/></g></g>
+<symbol id="spray" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+<path d="M6 194C50 150 80 112 118 72S170 22 194 6"/>
+<path d="M58 142C46 124 52 106 70 100C76 118 72 132 58 142Z"/>
+<path d="M92 108C108 110 122 122 124 140C106 140 94 128 92 108Z"/>
+<path d="M120 70C110 52 116 36 132 30C140 48 134 62 120 70Z"/>
+<path d="M150 44C168 48 180 60 180 76C164 74 152 62 150 44Z"/>
+<path d="M30 168C20 160 18 148 26 140C36 146 38 158 30 168Z"/></g>
+<use href="#fl" x="44" y="104" transform="scale(1.3)" style="transform-origin:44px 104px"/><use href="#fl" x="120" y="112"/><use href="#fl" x="96" y="52"/><use href="#fl" x="168" y="28"/></symbol></defs></svg>
+
+<header class="hero">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="pt"><path d="M0 0C-17-18-15-52 0-74C15-52 17-18 0 0Z"/><path d="M0-8V-60" fill="none" stroke-opacity=".55"/></g><g id="lily"><g fill="rgba(255,255,255,.92)" stroke="#5d7452" stroke-width="1" stroke-linejoin="round"><use href="#pt"/><use href="#pt" transform="rotate(60)"/><use href="#pt" transform="rotate(120)"/><use href="#pt" transform="rotate(180)"/><use href="#pt" transform="rotate(240)"/><use href="#pt" transform="rotate(300)"/></g><g stroke="#5d7452" stroke-width="1" fill="none"><path d="M0 0L-12-30M0 0L3-34M0 0L14-28"/></g><g fill="#a89a45"><circle cx="-12" cy="-30" r="2.4"/><circle cx="3" cy="-34" r="2.4"/><circle cx="14" cy="-28" r="2.4"/></g></g></defs></svg>
+  <svg class="lily l1" viewBox="-80 -80 160 160" aria-hidden="true"><use href="#lily"/></svg>
+  <svg class="lily l2" viewBox="-80 -80 160 160" aria-hidden="true"><use href="#lily"/></svg>
+  <svg class="lily l3" viewBox="-80 -80 160 160" aria-hidden="true"><use href="#lily"/></svg>
+  <svg class="spray s1" viewBox="0 0 200 200" aria-hidden="true"><use href="#spray"/></svg>
+  <svg class="spray s2" viewBox="0 0 200 200" aria-hidden="true"><use href="#spray"/></svg>
+  <div class="eyebrow">We’re getting married</div>
+  <h1>Emily<span>&amp;</span>Evan</h1>
+  <div class="date">Saturday, 14 October 2028</div>
+  <div class="place">Arklow Bay Hotel · Ireland</div>
+</header>
+
+<nav>
+  <a href="#details">Details</a><a href="#day">The Day</a><a href="#travel">Where to Stay</a><a href="#rsvp">RSVP</a><a href="#faq">FAQ</a>
+</nav>
+
+<section id="details">
+  <h2>Join Us</h2>
+  <p>We’d love you to celebrate with us. The ceremony and the celebration will both take place at the same venue, so once you arrive, you’re set for the day.</p>
+  <div class="card">
+    <h3>Ceremony &amp; Reception</h3>
+    <p>Arklow Bay Hotel<br>Sea Road, Ferrybank, Arklow<br>Co. Wicklow, Y14 DX02<br>Ceremony begins at 3:00 pm</p>
+  </div>
+</section>
+
+<section id="day">
+  <h2>The Day</h2>
+  <ul class="timeline">
+    <li><b>2:00 pm</b><span>Guests arrive &amp; welcome drinks</span></li>
+    <li><b>3:00 pm</b><span>Ceremony</span></li>
+    <li><b>4:00 pm</b><span>Photos &amp; drinks reception</span></li>
+    <li><b>5:30 pm</b><span>Dinner</span></li>
+    <li><b>8:30 pm</b><span>Cutting of the cake</span></li>
+    <li><b>9:00 pm</b><span>Dancing with our DJ</span></li>
+    <li><b>1:30 am</b><span>Last song &amp; farewell</span></li>
+  </ul>
+</section>
+
+<section id="travel">
+  <h2>Where to Stay</h2>
+  <div class="card"><h3>At the venue</h3><p>Rooms can be booked directly at Arklow Bay Hotel, subject to availability. As October is a busy time, we’d recommend booking early.</p></div>
+  <div class="card"><h3>Nearby hotels &amp; B&amp;Bs</h3><p>If the hotel is full, these are close by:</p>
+    <p><b>The Royal Hotel</b><br>Main Street, Arklow<br><b>Bridge Hotel</b><br>Arklow<br><b>Woodenbridge Hotel &amp; Lodge</b><br>Vale of Avoca, a short drive away<br><b>The Meetings B&amp;B</b><br>Avoca</p>
+    <p style="font-size:14px;color:var(--muted)">Please check availability and book directly with each property.</p></div>
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Arklow+Bay+Hotel+Sea+Rd+Ferrybank+Arklow+Y14+DX02" target="_blank" rel="noopener" id="mapbtn">Open in Maps</a>
+</section>
+
+<section id="rsvp">
+  <h2>RSVP</h2>
+  <p>Please let us know by <b>14 July 2028</b> whether you can make it.</p>
+  <p>Please reply using the form, and tell us everyone’s names and any dietary needs.</p>
+  <a class="btn" id="rsvpbtn" href="https://docs.google.com/forms/d/e/1FAIpQLSeVRcO8n8mmtPwD08i7QXkhPzln_uFAR6XCywUKukjhVxaibw/viewform" target="_blank" rel="noopener">RSVP now</a>
+</section>
+
+<section id="faq">
+  <h2>Good to Know</h2>
+  <details><summary>What should I wear?</summary><p>Fancy, smart or cocktail attire. Please avoid white and sage green, as these are reserved for the bride and bridal party. It’s an Irish October, so a layer or wrap is a good idea.</p></details>
+  <details><summary>Can I bring a plus one?</summary><p>Ours is a small wedding of around 70 guests, so we’re keeping numbers close. Please list everyone who will be attending in the RSVP form, and we’ll be looking at final numbers closer to the date.</p></details>
+  <details><summary>Are children welcome?</summary><p>We’re keeping the day adults-only, so unfortunately we’re unable to welcome children. Thank you for understanding.</p></details>
+  <details><summary>Will the ceremony be religious?</summary><p>No, ours is a non-religious ceremony, personal to the two of us.</p></details>
+  <details><summary>Gifts</summary><p>Your presence is the greatest gift. If you would like to give something, we would be very grateful for a gift of money.</p></details>
+</section>
+
+<footer>
+  <div>With love, Emily &amp; Evan</div>
+  <p><button id="qrtoggle" type="button">Get the QR code for invitations</button></p>
+  <div id="qrbox">
+    <div id="qr"></div>
+    <p><a class="btn" id="qrdl" download="wedding-qr.png" href="#">Download QR</a></p>
+    <p style="font-size:12px">Print at least 2.5 cm wide and test with a few phones.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('qrtoggle'),box=document.getElementById('qrbox'),made=false;
+  btn.addEventListener('click',function(){
+    var open=box.style.display==='block';
+    box.style.display=open?'none':'block';
+    if(open||made)return;
+    try{
+      var url=location.href.split('#')[0];
+      new QRCode(document.getElementById('qr'),{text:url,width:240,height:240,colorDark:'#000000',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+      made=true;
+      setTimeout(function(){
+        var c=document.querySelector('#qr canvas');
+        if(c)document.getElementById('qrdl').href=c.toDataURL('image/png');
+      },200);
+    }catch(e){document.getElementById('qr').textContent='QR code unavailable here.'}
+  });
+})();
+</script>
+</body>
+</html>
